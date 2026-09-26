@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Maherd18/sap-mcp-server/actions/workflows/ci.yml/badge.svg)](https://github.com/Maherd18/sap-mcp-server/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Node.js](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
+![Node.js](https://img.shields.io/badge/node-%3E%3D22-brightgreen)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
 
 An [MCP](https://modelcontextprotocol.io) server that lets AI agents read and write SAP ABAP
@@ -58,7 +58,7 @@ docker run --rm --env-file .env ghcr.io/maherd18/sap-mcp-server scripts/check-co
 docker run -i --rm --env-file .env -v sap-mcp-audit:/data ghcr.io/maherd18/sap-mcp-server
 ```
 
-**npx** (Node.js 20 or later, credentials as environment variables)
+**npx** (Node.js 22 or later, credentials as environment variables)
 
 ```bash
 npx -y github:Maherd18/sap-mcp-server

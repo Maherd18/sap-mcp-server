@@ -14,7 +14,7 @@
     "url": "https://github.com/Maherd18/sap-mcp-server/issues"
   },
   "keywords": ["mcp", "model-context-protocol", "sap", "abap", "adt", "ai-agent", "llm", "guardrails"],
-  "engines": { "node": ">=20" },
+  "engines": { "node": ">=22" },
   "bin": {
     "sap-mcp-server": "src/server.mjs"
   },

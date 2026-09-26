@@ -18,7 +18,7 @@ cd sap-mcp-server
 npm test    # no SAP system needed
 ```
 
-Node.js 20 or later, plain ESM, **no npm dependencies**. Please keep it that way: every
+Node.js 22 or later, plain ESM, **no npm dependencies**. Please keep it that way: every
 dependency adds supply-chain risk to a server with write access to development systems.
 
 To try changes against a real system, copy `.env.example` to `.env` and run `npm run check`.

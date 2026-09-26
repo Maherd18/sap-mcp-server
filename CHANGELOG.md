@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Require Node.js 22 or later; container image based on Node.js 24
+- Update GitHub Actions to current major versions
+
 ## [0.3.0] - 2026-09-26
 
 First public release.
