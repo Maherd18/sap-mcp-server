@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "sap-adt-docker": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm",
+        "--env-file", "/absolute/path/to/.env",
+        "-v", "sap-mcp-audit:/data",
+        "ghcr.io/maherd18/sap-mcp-server:latest"
+      ]
+    },
+    "sap-adt-npx": {
+      "command": "npx",
+      "args": ["-y", "github:Maherd18/sap-mcp-server"],
+      "env": {
+        "SAP_HOST": "sap-dev.example.com",
+        "SAP_PORT": "44300",
+        "SAP_PROTOCOL": "https",
+        "SAP_CLIENT": "100",
+        "SAP_USER": "MCP_AGENT",
+        "SAP_PASSWORD": "<password>"
+      }
+    },
+    "sap-adt-local": {
+      "command": "node",
+      "args": ["/absolute/path/to/sap-mcp-server/src/server.mjs"]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "mode": "enforce",
+  "identity": {
+    "developer": "",
+    "approvers": []
+  },
+  "allowedNamespaces": ["Z", "Y"],
+  "allowedPackages": ["ZMCP_SANDBOX"],
+  "allowedObjectTypes": ["PROG/P", "CLAS/OC", "INTF/OI", "TABL/DT", "FUGR/F"],
+  "writeEnabled": true,
+  "pathPrefix": "/sap/bc/adt",
+  "tools": {
+    "sap_test_connection":   { "access": "read",  "objectScoped": false },
+    "sap_search_objects":    { "access": "read",  "objectScoped": false },
+    "sap_read_source":       { "access": "read",  "objectScoped": true },
+    "sap_read_metadata":     { "access": "read",  "objectScoped": true },
+    "sap_list_transports":   { "access": "read",  "objectScoped": false },
+    "sap_write_source":      { "access": "write", "objectScoped": true },
+    "sap_activate":          { "access": "write", "objectScoped": true, "requiresApproval": true },
+    "sap_release_transport": { "access": "write", "objectScoped": false, "requiresApproval": true, "separationOfDuties": true }
+  },
+  "auditLog": {
+    "enabled": true,
+    "file": "logs/audit.jsonl"
+  }
+}

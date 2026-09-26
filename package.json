@@ -1,0 +1,28 @@
+{
+  "name": "sap-mcp-server",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "MCP server that gives AI agents policy-controlled read and write access to SAP ABAP development objects via ADT",
+  "license": "MIT",
+  "author": "Maher Darweesh",
+  "homepage": "https://github.com/Maherd18/sap-mcp-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maherd18/sap-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Maherd18/sap-mcp-server/issues"
+  },
+  "keywords": ["mcp", "model-context-protocol", "sap", "abap", "adt", "ai-agent", "llm", "guardrails"],
+  "engines": { "node": ">=20" },
+  "bin": {
+    "sap-mcp-server": "src/server.mjs"
+  },
+  "files": ["src/", "config/", "scripts/", ".env.example", "README.md", "LICENSE"],
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check-connection.mjs",
+    "setup:sandbox": "node scripts/setup-sandbox.mjs"
+  }
+}

@@ -1,0 +1,13 @@
+# Never copy credentials, logs or git metadata into the image
+.env
+.env.*
+!.env.example
+logs/
+*.log
+.git/
+.github/
+node_modules/
+examples/
+Dockerfile
+.dockerignore
+test/
