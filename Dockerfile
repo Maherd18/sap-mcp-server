@@ -8,7 +8,7 @@
 # Credentials are passed at runtime via --env-file or -e and are never baked
 # into the image.
 
-FROM node:24-alpine
+FROM node:26-alpine
 
 LABEL org.opencontainers.image.title="sap-mcp-server" \
       org.opencontainers.image.description="MCP server with policy-controlled access to SAP ABAP development objects via ADT" \
