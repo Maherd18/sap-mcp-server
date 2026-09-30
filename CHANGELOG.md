@@ -7,20 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-09-30
+
 ### Changed
 
 - Require Node.js 22 or later; container image based on Node.js 24
 - Update GitHub Actions to current major versions
+- Document the npx setup: pass credentials as environment variables and set
+  `SAP_MCP_AUDIT_FILE`, otherwise the audit log ends up in the npm cache
 
 ### Fixed
 
 - Audit log keeps numbers and booleans as JSON types instead of writing them as strings
   (e.g. `"found": true` instead of `"found": "true"`)
-
-### Documentation
-
-- npx setup: pass credentials as environment variables and set `SAP_MCP_AUDIT_FILE`,
-  otherwise the audit log ends up in the npm cache
 
 ## [0.3.0] - 2026-09-26
 
@@ -37,5 +36,6 @@ First public release.
 - Connection check and sandbox setup scripts
 - Tests for the policy, the MCP handshake and the tool path against a simulated ADT endpoint
 
-[Unreleased]: https://github.com/Maherd18/sap-mcp-server/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/Maherd18/sap-mcp-server/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/Maherd18/sap-mcp-server/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/Maherd18/sap-mcp-server/releases/tag/v0.3.0

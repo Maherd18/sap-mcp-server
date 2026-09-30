@@ -1,6 +1,6 @@
 {
   "name": "sap-mcp-server",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "type": "module",
   "description": "MCP server that gives AI agents policy-controlled read and write access to SAP ABAP development objects via ADT",
   "license": "MIT",
