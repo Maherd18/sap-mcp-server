@@ -64,6 +64,11 @@ docker run -i --rm --env-file .env -v sap-mcp-audit:/data ghcr.io/maherd18/sap-m
 npx -y github:Maherd18/sap-mcp-server
 ```
 
+npx runs the server from the npm cache, so a `.env` file in your current directory is not
+read and the default audit log would end up inside the cache. Pass the credentials as
+environment variables and set `SAP_MCP_AUDIT_FILE` (and `SAP_MCP_POLICY_FILE` for your own
+policy) to absolute paths, as in [`examples/claude_desktop_config.json`](examples/claude_desktop_config.json).
+
 **From source**
 
 ```bash
@@ -144,7 +149,10 @@ More variants (npx, local checkout) are in [`examples/`](examples/).
 | `SAP_MCP_POLICY_FILE` | `config/policy.json` | Path to your own policy |
 | `SAP_MCP_AUDIT_FILE` | `logs/audit.jsonl` | Audit log target (`/data/audit.jsonl` in Docker) |
 
-Settings are read from the environment first, then from `.env` in the project directory.
+Settings are read from the environment first, then from `.env` in the project directory
+(the directory containing `src/`, not your current working directory). The default audit
+log `logs/audit.jsonl` is also placed in the project directory. Use absolute paths for
+`SAP_MCP_POLICY_FILE` and `SAP_MCP_AUDIT_FILE`.
 
 ## Policy
 
