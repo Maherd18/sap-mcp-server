@@ -18,7 +18,8 @@
         "SAP_PROTOCOL": "https",
         "SAP_CLIENT": "100",
         "SAP_USER": "MCP_AGENT",
-        "SAP_PASSWORD": "<password>"
+        "SAP_PASSWORD": "<password>",
+        "SAP_MCP_AUDIT_FILE": "/absolute/path/to/sap-mcp-audit/audit.jsonl"
       }
     },
     "sap-adt-local": {

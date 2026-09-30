@@ -13,9 +13,10 @@ import path from 'node:path';
 /** Parameter names that never go into the log. */
 const SECRET = /^(password|passwd|token|secret|authorization|cookie)$/i;
 
-/** Truncates long values and removes secrets. */
+/** Truncates long values and removes secrets. Numbers and booleans keep their type. */
 function sanitize(value, maxLength = 400) {
   if (value === null || value === undefined) return value;
+  if (typeof value === 'number' || typeof value === 'boolean') return value;
   if (typeof value !== 'object') {
     const s = String(value);
     return s.length > maxLength ? `${s.slice(0, maxLength)}…[${s.length} chars]` : s;

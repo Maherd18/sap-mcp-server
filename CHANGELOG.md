@@ -12,6 +12,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Require Node.js 22 or later; container image based on Node.js 24
 - Update GitHub Actions to current major versions
 
+### Fixed
+
+- Audit log keeps numbers and booleans as JSON types instead of writing them as strings
+  (e.g. `"found": true` instead of `"found": "true"`)
+
+### Documentation
+
+- npx setup: pass credentials as environment variables and set `SAP_MCP_AUDIT_FILE`,
+  otherwise the audit log ends up in the npm cache
+
 ## [0.3.0] - 2026-09-26
 
 First public release.

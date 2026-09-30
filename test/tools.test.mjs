@@ -75,6 +75,15 @@ test('reads source inside the allowed package', async () => {
   assert.equal(ctx.audit.entries[0].decision, 'allow');
 });
 
+test('the audit log keeps booleans and numbers as their JSON types', async () => {
+  const ctx = context();
+  await ctx.client.connect();
+  await findTool('sap_write_source').run(ctx, { object_name: 'ZCL_DEMO', source: 'A\nB' });
+  const entry = ctx.audit.entries[0];
+  assert.equal(entry.params.resolved.found, true);
+  assert.equal(entry.params.requested.lines, 2);
+});
+
 test('denies reading an object from another package, based on the system lookup', async () => {
   const ctx = context();
   await ctx.client.connect();
